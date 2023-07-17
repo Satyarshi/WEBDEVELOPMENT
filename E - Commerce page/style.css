@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+/*html,body{
+    height: 100%;
+}*/
+header{
+    background-color:#2874f0;
+}
+nav{
+    height:10vh;
+    display:flex;
+    align-items: center;
+}
+.search{
+    padding-left: 50px;
+}
+.search input{
+    width:500px;
+    height: 25px;
+    border-radius: 5px;
+}
+.btn{
+    background-color: white;
+    border-radius: 7px;
+    color:blue;
+    cursor:pointer;
+}
+.button{
+    padding-left:20px;
+}
+.login{
+    padding-left: 100px;
+}
+.b{
+    background-color: white;
+    height: 25px;
+    width:100px;
+    color:blue;
+    cursor:pointer;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+nav ul li a:hover{
+    color:black;
+}
+nav ul li{
+    list-style:none;
+    padding-left: 150px ;
+}
+nav ul{
+    display:flex;
+}
+main{
+    height: calc(100vh - 10vh - 5vh);
+}
+.container{
+    display:flex;
+}
+footer{
+display:flex;
+    background-color: #2874f0;
+    justify-content: center;
+    height:5vh;
+    color:white;
+    align-items: center;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    padding:20px 55px;
+}
+.carditem img:hover{
+    width:110px;
+}
+.cardname{
+    padding-left: 21px; 
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;  
+}
+.cardname a{
+    text-decoration: none;
+    color:black;
+}
+.cardname p a:hover{
+    color:blue;
+}
+.cardname1{
+    padding-left: 28px;   
+    padding-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+.cardname1 a{
+    text-decoration: none;
+    color:black;
+}
+.cardname1 p a:hover{
+    color:blue;
+}
+@media (400px <= width <= 900px){
+   *{
+    background-color:yellow;
+   }
+    
+}
