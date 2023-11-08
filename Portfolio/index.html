@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Slab&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Mono&family=Roboto+Slab&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Raleway&family=Roboto+Mono&family=Roboto+Slab&family=Roboto:wght@700&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Raleway&family=Roboto+Mono&family=Roboto+Slab&family=Roboto:wght@700;900&family=Tilt+Neon&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f0d373bb1c.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            max-width:100%;                                 /*to avoid horizontal overflow */
+            background-color: #07052a;
+        }
+        .header{
+            width:100vw;
+            height:11vh;
+            display:flex;
+            position:fixed;
+            z-index:1
+        }
+        .nav ul{
+            display:flex;
+            list-style-type: none;
+            width:120vh;
+            height:10vh;
+            justify-content: space-around; 
+            align-items: center;
+            margin-right: 150px;
+            color:white; 
+            background-color: #182132;
+        }
+        .nav{
+            background-color: #182132;
+        }
+        .nav ul li a:hover{
+            font-size: 18px;
+        }
+        .nav ul li:hover{
+            font-size: 18px;
+            color:#bc69ff;
+        }
+        .logo{
+            width:40%;
+            background-color: #182132;
+        }
+        .logo img{
+            width: 50px;
+            margin-left: 100px;
+            margin-top: 2vh;
+            background-color: #182132;
+        }
+        .nav ul li{
+            background-color: #182132;
+        }
+        .heading{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            margin-top: 8vh;
+        }
+        .wrapper{
+            width:60%;
+            position:relative;
+            top:100px;
+        }
+        .text{
+            font-family: 'Roboto Slab', serif;
+            font-size: xx-large;
+            color:white;
+            margin-top: 20px;
+        }
+        .text span{
+            color:#bc69ff;
+        }
+        .auto-type{
+            color:#bc69ff;
+        }
+        .wrapper button{
+            margin-top: 50px;
+            color:white;
+            background-color: #bc69ff;
+            width:132px;
+            height:50px;
+            border-radius: 25px;
+            border:0px;
+            cursor:pointer;
+            font-size: medium;
+        }
+        .wrapper button:hover{
+            height:55px;
+        }
+        main{
+            height:60vh;
+            overflow: hidden;;
+        }
+        .profile img{
+            width:300px;
+            height:300px;
+            position:relative;
+            left:62vw;
+            top:-24vh;
+        }
+        .services{
+            height:80vh;
+            margin-top: 15vh;
+        }
+        .service{
+            text-align: center;
+            color:#bc69ff;
+            font-size:xx-large;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 600;
+        }
+        .cards{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 10vh;
+        }
+        .card{
+            background-color:#212d43;
+            width:20vw;
+            height:63vh;
+            border-radius:20px;
+        }
+        .card1 img{
+            width:90px;
+            position:relative;
+            top:15px;
+            left:105px;
+            background-color: #212d43;
+            
+        }
+        .c{
+            color:white;;
+            width:15vw;
+            height:25vh;
+            margin:auto;
+            margin-top: 2vw;
+            line-height: 1.6;
+        }
+        .c p{
+            background-color: #212d43;
+            font-size: medium;
+            /* text-align: center; */
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .card:hover{
+            background-color: #7930c8;
+        }
+        .card:hover .bghover{          /*To affect other elements when one element is hovered, an element should be inside another element*/
+            background-color: #7930c8;
+        }
+        .card:hover img{
+            background-color: #7930c8;
+        }
+        .card:hover a{
+            background-color: #07052a;
+        }
+        .card:hover button{
+            background-color: #07052a;
+        }
+        .card button:hover{
+            height:6vh;
+        }
+        .c a{
+            text-decoration: none;
+            color:white;
+            border:0px;
+            background-color: #7930c8;
+        }
+        .c button{
+            margin-left: 3vw;
+            margin-top: 1.5vw;
+            border-radius:20px;
+            width:8vw;
+            height:5vh;
+            border:0px;
+            background-color: #7930c8;
+        }
+        .card2 img{
+            width:5vw;
+            height:10vh;
+            position: relative;
+            left:7.5vw;
+            top:2.5vh;
+            background-color: #212d43;
+        }
+        .web{
+            background-color: #212d43;
+            font-size: medium;
+            /* text-align: center; */
+            font-weight: 500;
+            width:15vw;
+            height:32vh;
+            margin:auto;
+            margin-top: 4vh;
+            line-height: 1.5;
+            color:white;
+            letter-spacing: 1px;
+        }
+        .card:hover .web{
+            background-color:#7930c8;
+        }
+        .web button{
+            margin-left: 3.5vw;
+            margin-top: 1.6vw;
+            border-radius:20px;
+            width:8vw;
+            height:5vh;
+            border:0px;
+            background-color: #7930c8;
+        }
+        .web a{
+            text-decoration: none;
+            color:white;
+            border:0px;
+            background-color: #7930c8;
+        }
+        .card3 img{
+            width:6vw;
+            height:10vh;
+            margin-left:7vw;
+            margin-top:3vh;
+            background-color: #212d43;
+        }
+        .python{
+            background-color: #212d43;
+            font-size: medium;
+            /* text-align: center; */
+            font-weight: 500;
+            width:15vw;
+            height:32vh;
+            margin:auto;
+            margin-top: 4vh;
+            line-height: 1.5;
+            color:white;
+            letter-spacing: 1px;
+        }
+        .card:hover .python{
+            background-color:#7930c8;
+        }
+        .python button{
+            margin-left: 3.5vw;
+            margin-top: 1.6vw;
+            border-radius:20px;
+            width:8vw;
+            height:5.5vh;
+            border:0px;
+            background-color: #7930c8;
+        }
+        .python a{
+            text-decoration: none;
+            color:white;
+            border:0px;
+            background-color: #7930c8;
+        }
+        .projects{
+            height:80vh;
+            margin-top: 15vh;
+        }
+        .project{
+            text-align: center;
+            color:#bc69ff;
+            font-size:xx-large;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 600;
+        }
+        .footer{
+            height:40vh;
+            margin-top: 15vh;
+            background-color: rgb(68, 9, 110);
+            overflow: hidden;
+        }
+        .dot{
+            width:2.5vw;
+            background-color:white;
+            padding-top:5vh;
+            border-radius: 100%;
+            position:relative;
+            top:5vh;
+            left:10vh;
+        }
+        #dot{
+            width:3vw;
+            background-color:white;
+            padding-top:6vh;
+            border-radius: 100%;
+            position:relative;
+            left:37vh;
+            top:-7vh;
+        }
+        .dot1{
+            width:1vw;
+            background-color:white;
+            padding-top:2vh;
+            border-radius: 100%;
+            position:relative;
+            left:152vh;
+            top:-82vh;
+        }
+        .blog{
+            margin-top:4vh;
+            margin-left:8vw;
+            background-color: rgb(68, 9, 110);
+        }
+        .dot2{
+            width:3vw;
+            background-color:white;
+            padding-top:6vh;
+            border-radius: 100%;
+            position:relative;
+            left:177vh;
+            top:-100vh;
+        }
+        .text1{
+            width:15vw;
+            height:5vh;
+            color:#ffffff;
+            letter-spacing: 1px;
+            font-size:15px;
+            line-height:20px;
+            position:relative;
+            top:-28vh;
+            left:25vw;
+            text-decoration: solid;
+        }
+        .symbol{
+            display: flex;
+            justify-content:space-between;
+            width:10vw;
+            position: relative;
+            top:-18vh;
+            left:25vw;
+            background-color: rgb(68, 9, 110);
+        }
+        .fa-brands:hover{
+            font-size:xx-large;
+        }
+        .company ul{
+            list-style: none;
+            line-height: 30px;
+        }
+        .company{
+            width:max-content;
+            position:relative;
+            top:-38vh;
+            left:45vw;
+        }
+        .company ul li{
+            background-color: rgb(68, 9, 110);
+        }
+        .company li a{
+            text-decoration: none;
+            color:white;
+            background-color: rgb(68, 9, 110);
+        }
+        .contact{
+            width:fit-content;
+            position:relative;
+            top:-54vh;
+            left:58vw;
+            color:white;
+        }
+        .contact ul{
+            list-style: none;
+            line-height: 30px;
+        }
+        .contact ul li{
+            background-color: rgb(68, 9, 110);
+        }
+        .last{
+            border-radius: 50%;
+            margin-left:75vw;
+            position:relative;
+            top:-78vh;
+        }
+        @media (max-width:996px) {
+            .services{
+                height:100vh;
+            }
+            .card{
+                width:25vw;
+                height:85vh;
+            }
+            .card1 img{
+                left:73px;
+            }
+            .card2 img{
+                left:9.5vw;
+            }
+            .card3 img{
+                margin-left:9vw;
+            }
+            .projects{
+                height:115vh;
+            }
+            .pcard{
+                height:102vh
+            }
+            .footer{
+                height:45vh;
+            }
+            .blog{
+                margin-left: 2vw;
+            }
+            .dot{
+                width:3.5vw;
+                top:12vh;
+                left:3vh;
+            }
+            #dot{
+                width:4vw;
+                left:27vh;
+                top:-8vh;
+            }
+            .text1{
+                top:-35vh;
+            }
+            .symbol{
+                top:-16vh;
+            }
+            .company{
+                top:-43.5vh;
+            }
+            .contact{
+                top:-61.5vh;
+            }
+            .last{
+                top:-84vh;
+            }
+            .dot1{
+                width:1.5vw;
+                top:-89vh;
+                left:117vh;
+            }
+            .dot2{
+                width:4vw;
+                left:140vh;
+                top:-108vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+            <div class="logo">
+                <img src = "images/download-modified.png">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><i class="fa-solid fa-house fa-xs"></i> &nbsp; <a href="http://127.0.0.1:5500/index.html"style="text-decoration:none;background-color: #182132;color:white">Home</a></li>
+                    <li><i class="fa-sharp fa-solid fa-gear fa-xs"></i> &nbsp; <a href="#services"style="text-decoration:none;background-color: #182132;color:white">Service</a></li>
+                    <li><i class="fa-solid fa-briefcase fa-xs"></i> &nbsp; <a href="#projects"style="text-decoration:none;background-color: #182132;color:white">Works</a></li>
+                    <li><i class="fa-solid fa-envelope fa-xs"></i> &nbsp; <a href="#footer"style="text-decoration:none;background-color: #182132;color:white">Contacts</a></li>
+                </ul>
+            </div>
+    </div>
+    <main>
+        <div class="heading">
+            <div class="wrapper">
+                <p class="text">Hello, I'm <span>Satyarshi Shukla</span></p>
+                <p class="text">I'm a <span class="auto-type"></span></p>
+                <a href="mailto:satyarshishukla123@gmail.com" target="_blank"><button type="button">Let's Talk</button></a>
+            </div>
+            <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            <script>
+                var typed = new Typed(".auto-type",{
+                    strings : ["Developer","Programmer","Web-Designer","Learner"],
+                    typeSpeed : 150,
+                    backSpeed : 150,
+                    loop : true
+                })
+            </script>
+        </div>
+        <div class="profile">
+            <img src="images/1689278367681-removebg-preview.png">
+        </div>
+    </main>
+    <div class="services" id="services">
+         <p class="service">Specializing In</p>
+         <div class="cards">
+            <div class="card card1"><img src="images/c-logo-icon-28389.png">
+                <div class="c"><p class="bghover">I am learning data structures and alogrithms using C++. It is an object oriented programming language and is widely used language for commpetitive programming. Click below to jump to my leetcode profile where i test my dsa knowledge.</p>
+                <button type="button"><a href="https://leetcode.com/Satyarshi/" target="_blank">Find More</button></a>
+                </div>
+            </div>
+            <div class="card card2"><img src="images/webdesign.png">
+                <div class="web">I am learning web-develoment. Web development is an ever-evolving field that involves designing and
+                    building websites and web applications using various programming languages and technologies, with a focus on creating engaging and user-friendly online experiences.
+                    <button type="button"><a href="https://github.com/Satyarshi/WEBDEVELOPMENT" target="_blank">Find More</button></a>
+                </div>
+            </div>
+            <div class="card card3"><img src="images/pngwing.com.png">
+                <div class="python">I am learning python. Python is a popular and versatile high-level programming language known for its    readability and straightforward syntax, making it an ideal choice for diverse applications, from web development to  scientific computing.
+                <button type="button"><a href="https://github.com/Satyarshi" target="_blank">Find More</button></a>
+                </div>
+            </div>
+         </div>
+    </div>
+    <hr style="height:1px;width:90vw;margin: auto;background-color:silver;border-width:0px;margin-top: 8vh;">
+    <div class="projects" id="projects">
+        <p class="project">Recently Finished Projects</p>
+        <div class="cards">
+            <div class="card card1 pcard"><img src="images/wlp-modified.png">
+                <div class="web">With unwavering dedication, we brought our website to life through countless hours of coding, pixel-perfect design, and a dash of creative magic. Experience the culmination of our hard work and passion. Dive into the magic of our digital craftsmanship today, where innovation and creativity converge seamlessly.
+                <button type="button"><a href="https://landingpage01230.netlify.app/" target="_blank">Explore</button></a>
+                </div>
+            </div>
+            <div class="card card1 pcard"><img src="images/log-modified.png">
+                <div class="web">I generated the code for the login page.Creating a login page involves designing the user interface (UI) and writing the necessary code in a programming language like HTML, CSS, and JavaScript. It also requires setting up a backend system to handle user authentication,and grant access to authorized users.
+                <button type="button"><a href="http://127.0.0.1:5501/index.html" target="_blank">Explore</button></a>
+                </div>
+            </div>
+            <div class="card card1 pcard"><img src="images/webp-modified.png">
+                <div class="web">I designed and built the web portfolio by creating HTML and CSS code, incorporating responsive design principles to ensure compatibility across various devices. Content and layout were tailored to showcase my skills and achievements, presenting a visually appealing online representation of my work.<button type="button"><a href="https://portfolio152.netlify.app/" target="_blank">Explore</button></a></div>
+            </div>
+        </div>
+    </div>
+    <div class = "footer" id="footer">
+        <div class="dot"> </div>
+        <img src="images/BLOG_SEO-para-mobile-modified.png" width="200vw" class="blog">
+        <div id="dot"></div>
+        <div class="text1">
+            <p style="background-color: rgb(68, 9, 110)">Lorem ipsum, dolor sit amet consectetur adipisicing elite. Animi ducimus facilis quibus voluptatibus, alias conseqem.</p>
+        </div>
+        <div class="symbol">
+            <a href="https://www.facebook.com/" target="_blank" style="background-color: rgb(68, 9, 110)"><i class="fa-brands fa-facebook-f fa-sm" style="color:#ffffff;"></i></a>
+            <a href="https://twitter.com/?lang=en" target="_blank" style="background-color: rgb(68, 9, 110)"><i class="fa-brands fa-x-twitter fa-sm" style="color: #ffffff;background-color: rgb(68, 9, 110)"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" style="background-color: rgb(68, 9, 110)"><i class="fa-brands fa-instagram fa-sm" style="color: #ffffff;"></i></a>
+            <a href="https://www.linkedin.com/in/satyarshi-shukla-5ab647283/" target="_blank" style="background-color: rgb(68, 9, 110)"><i class="fa-brands fa-linkedin-in fa-sm" style="color: #ffffff;"></i></a>
+            <a href="https://github.com/Satyarshi" target="_blank" style="background-color: rgb(68, 9, 110)"><i class="fa-brands fa-github fa-sm" style="color: #ffffff;background-color: rgb(68, 9, 110)"></i></a>
+        </div>
+        <div class="company">
+            <ul>
+                <li style="font-weight:900;font-family: 'Roboto Slab', serif;text-decoration: solid;color:white;text-decoration:underline;">Company</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Works</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <ul>
+                <li style="font-weight:900;font-family: 'Roboto Slab', serif;text-decoration: solid; color:white;text-decoration: underline;">Contact</li>
+                <li>2/45 Tower Street,USA</li>
+                <li>0012 678 8899</li>
+                <li>contact@notorous.com</li>
+                <li>www.satyas.com</li>
+            </ul>
+        </div>
+        <img src="images/b1c2b3833775abc2380fd4c2d35e1017.webp" width="200vw" class="last">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</body>
+</html>
