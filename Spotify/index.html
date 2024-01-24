@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Spotify</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <div class="home">
+          <ul>
+            <li><img src="home.svg" alt="home" />Home</li>
+            <li><img src="search.svg" alt="search" />Search</li>
+          </ul>
+        </div>
+        <div class="library">
+          <div class="libImage">
+            <img src="library.svg" alt="library" />
+            <div class="heading">Your Library</div>
+            <div class="symbol">
+              <img onclick="changesymbol()" src="subtract.svg" alt="symbol" />
+            </div>
+          </div>
+          <div class="songs songs1">
+            <ul>
+              <li onclick="playsong(this)">
+                <div class="name">Badass Leo</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Lokiverse 2 Leo</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Naa Ready Leo</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Once Upon A Time Vikram</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Pathala Pathala Vikram</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Porkanda Singam Edm Ver Vikram</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Porkanda Singam Vikram</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Ratata Leo</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Vikram (title Teaser Theme)</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Vikram Title Track</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Villain Yaaru Leo</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Wasted Vikram</div>
+                <img src="play.svg" alt="play" />
+              </li>
+            </ul>
+          </div>
+          <div class="songs songs2">
+            <ul>
+              <li onclick="playsong(this)">
+                <div class="name">Ram Siya Ram Adipurush</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Ram Siya Ram Lofi</div>
+                <img src="play.svg" alt="play" />
+              </li>
+              <li onclick="playsong(this)">
+                <div class="name">Shri Hari Stotram Lofi</div>
+                <img src="play.svg" alt="play" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="container">
+          <div class="nav">
+            <button class="circular-button">
+              <img src="left.svg" alt="previous" />
+            </button>
+            <button class="circular-button">
+              <img src="right.svg" alt="next" />
+            </button>
+            <div class="icons">
+              <div class="new">
+                <img src="new.svg" alt="what's new" />
+                <span class="tooltip">What's New</span>
+              </div>
+              <div class="profile">
+                <img src="profile.svg" alt="profile" />
+                <span class="tooltip">Satyarshi Shukla</span>
+              </div>
+            </div>
+          </div>
+          <div class="playlist">
+            <div class="cardContainer">
+              <div class="card" onclick="findplaylist(this)">
+                <img
+                  src="images/radha-krishna-with-cow-poster-sunrise-landscape-background-2HBXXM2.jpg"
+                  alt="lokiverse"
+                />
+                <h2>Bhakti Songs</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+              <div class="card" onclick="findplaylist(this)">
+                <img src="images/jeeva-artist-rolex.jpg" alt="lokiverse" />
+                <h2>South Beats</h2>
+                <div class="play-button"></div>
+                <p>Jan 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="playbar">
+      <div class="aboveseekbar">
+        <div class="songname"></div>
+        <div class="buttons">
+          <img
+            id="previous"
+            src="previous.svg"
+            alt="previous"
+            onclick="playPrevious()"
+          />
+          <img id="play" onclick="changebutton()" src="play.svg" alt="play" />
+          <img id="next" src="next.svg" alt="next" onclick="playNext()" />
+        </div>
+        <div class="songduration">00:00/00:00</div>
+      </div>
+      <div class="seekbar"></div>
+      <div class="circle"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
